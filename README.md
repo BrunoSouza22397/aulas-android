@@ -1,8 +1,6 @@
-# aulas-android
-exercicios das aulas de desenvolvimento mobile
-
+#Aulas de desenvolvimento em android
 ##Índice
-###Aula5Exer1Tarde:
-Exemplo enviando mensagens toast de diferentes formas ao clicar nos botões.
-###CalculadoraAmor
-App em que o usuário digito dois nomes e clica no botão, o app retorna uma porcentagem random e os nomes digitados.
+1. Aula5Exer1Tarde
+App que monstra mensagens toast usando métodos diferentes ao clicar em botões.
+2. Calculadora Amor
+App em que o usuário digita dois nomes, o app retorna uma porcentagem aleatória e os dois nomes digitados.
