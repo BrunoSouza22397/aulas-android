@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ExRadioButtonCheckBoxTarde</string>
+    <string name="ma_et_name">Type your name...</string>
+    <string name="ma_tv_gender">Gender</string>
+    <string name="ma_rb_male">Male</string>
+    <string name="ma_rb_female">Female</string>
+    <string name="ma_tv_prefs">Prefs</string>
+    <string name="ma_cb_anime">Anime</string>
+    <string name="ma_cb_manga">Manga</string>
+    <string name="ma_bt_add">Add</string>
+</resources>
