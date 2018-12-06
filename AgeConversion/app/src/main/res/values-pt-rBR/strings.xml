@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ConversãoIdade</string>
+    <string name="ma_et_name">Nome...</string>
+    <string name="ma_et_age">Idade...</string>
+    <string name="ma_bt_convert">Converter</string>
+</resources>

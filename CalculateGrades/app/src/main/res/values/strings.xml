@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CalculateGrades</string>
+    <string name="ma_et_name">Name</string>
+    <string name="ma_et_n1">G1</string>
+    <string name="ma_et_n2">G2</string>
+    <string name="ma_tv_sex">Sex</string>
+    <string name="ma_rb_male">Male</string>
+    <string name="ma_rb_female">Female</string>
+    <string name="ma_bt_register">Register</string>
+    <string name="name_error">Type a name.</string>
+    <string name="grade_error">Type a grade.</string>
+    <string name="sex_error">Choose a sex.</string>
+    <string name="response_1">Results: </string>
+    <string name="response_2">Student: </string>
+    <string name="response_3">Sex: </string>
+    <string name="response_4">G1: </string>
+    <string name="response_5">G2: </string>
+    <string name="response_6">Final Grade: </string>
+    <string name="response_7">"Concept: "</string>
+</resources>

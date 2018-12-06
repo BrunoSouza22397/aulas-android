@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CalculateRectangle</string>
+    <string name="ma_et_width">Width</string>
+    <string name="ma_et_height">Height</string>
+    <string name="ma_bt_calculate">Calculate</string>
+    <string name="alert_title">Calculations</string>
+</resources>

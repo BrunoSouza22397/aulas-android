@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CalcularNotas</string>
+    <string name="ma_et_name">Nombre</string>
+    <string name="ma_et_n1">N1</string>
+    <string name="ma_et_n2">N2</string>
+    <string name="ma_tv_sex">Sexo</string>
+    <string name="ma_rb_male">Masculino</string>
+    <string name="ma_rb_female">Femenino</string>
+    <string name="ma_bt_register">Registrar</string>
+    <string name="name_error">Escriba un nombre.</string>
+    <string name="grade_error">Escriba una nota.</string>
+    <string name="sex_error">Eligir un sexo.</string>
+    <string name="response_1">"Resultados: "</string>
+    <string name="response_2">"Estudiante: "</string>
+    <string name="response_3">"Sexo: "</string>
+    <string name="response_4">"N1: "</string>
+    <string name="response_5">"N2: "</string>
+    <string name="response_6">"Nota Final: "</string>
+    <string name="response_7">"Concepto: "</string>
+</resources>
