@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ExSpinnerListViewStringArrayTarde</string>
+    <string-array name="e1_sp_sexo">
+        <item>Selecione</item>
+        <item>Masculino</item>
+        <item>Feminino</item>
+        <item>Outro</item>
+    </string-array>
+</resources>
