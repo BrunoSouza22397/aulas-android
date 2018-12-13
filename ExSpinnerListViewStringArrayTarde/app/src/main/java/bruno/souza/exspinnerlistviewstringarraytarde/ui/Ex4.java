@@ -1,16 +1,21 @@
 package bruno.souza.exspinnerlistviewstringarraytarde.ui;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.FormatFlagsConversionMismatchException;
 
@@ -68,6 +73,32 @@ public class Ex4 extends AppCompatActivity {
                 toast("Contato cadastrado com sucesso!");
             }
         });
+        lvContatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent it = new Intent(Ex4.this,Ex4Detalhes.class);
+                Contato c = (Contato) parent.getItemAtPosition(position);
+                it.putExtra("c", c);
+                startActivity(it);
+            }
+        });
+        lvContatos.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                AlertDialog.Builder adb=new AlertDialog.Builder(Ex4.this);
+                adb.setTitle("Excluir?");
+                adb.setMessage("Tem certeza que quer excluir este contato?");
+                adb.setNegativeButton("Cancelar", null);
+                adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        contato.remove(position);
+                        adapter.notifyDataSetChanged();
+                    }});
+                adb.show();
+                return true;
+            }
+        });
+
     }
     private void hideSoftKeyboard(View v){
         InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
