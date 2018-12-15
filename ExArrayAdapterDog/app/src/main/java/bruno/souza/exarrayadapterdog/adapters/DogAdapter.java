@@ -1,10 +1,11 @@
 package bruno.souza.exarrayadapterdog.adapters;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -12,62 +13,49 @@ import java.util.ArrayList;
 import bruno.souza.exarrayadapterdog.R;
 import bruno.souza.exarrayadapterdog.model.Dog;
 
-public class DogAdapter extends BaseAdapter{
+public class DogAdapter extends RecyclerView.Adapter {
 
     private Context context;
     private ArrayList<Dog> dogs;
-    private LayoutInflater inflater;
 
     public DogAdapter(Context context, ArrayList<Dog> dogs) {
         this.context = context;
         this.dogs = dogs;
-        this.inflater = LayoutInflater.from(context);
+    }
+
+    @NonNull
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.line_dog, parent,false);
+        ViewHolder holder = new ViewHolder(view);
+        return holder;
     }
 
     @Override
-    public int getCount() {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+        ViewHolder hold = (ViewHolder) holder;
+        Dog dog = dogs.get(position);
+
+        hold.tvRace.setText("Raça: "+dog.getRace());
+        hold.tvAge.setText("Idade: "+dog.getAge());
+        hold.tvRealAge.setText("Idade Real: "+dog.calcDogAge());
+    }
+
+    @Override
+    public int getItemCount() {
         return dogs.size();
     }
 
-    @Override
-    public Dog getItem(int position) {
-        return dogs.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
-
-        if (convertView == null){
-            convertView = inflater.inflate(R.layout.line_dog, parent, false);
-            holder = new ViewHolder(convertView);
-            convertView.setTag(holder);
-        }else{
-            holder = (ViewHolder) convertView.getTag();
-        }
-
-        Dog d = getItem(position);
-
-        holder.tvRace.setText("Raça: "+d.getRace());
-        holder.tvAge.setText("Idade: "+d.getAge());
-        holder.tvRealAge.setText("Idade Real: "+d.calcDogAge());
-
-        return convertView;
-    }
-    static class ViewHolder{
-        private TextView tvRace;
-        private TextView tvAge;
-        private TextView tvRealAge;
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        final TextView tvRace;
+        final TextView tvAge;
+        final TextView tvRealAge;
 
         public ViewHolder(View v) {
-            this.tvRace = v.findViewById(R.id.ld_tv_race);
-            this.tvAge = v.findViewById(R.id.ld_tv_age);
-            this.tvRealAge = v.findViewById(R.id.ld_tv_real_age);
+            super(v);
+            tvRace = v.findViewById(R.id.ld_tv_race);
+            tvAge = v.findViewById(R.id.ld_tv_age);
+            tvRealAge = v.findViewById(R.id.ld_tv_real_age);
         }
     }
 }

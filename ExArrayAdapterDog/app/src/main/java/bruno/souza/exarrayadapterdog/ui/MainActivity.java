@@ -2,6 +2,8 @@ package bruno.souza.exarrayadapterdog.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText etRace;
     private EditText etAge;
     private Button btOK;
-    private ListView lvDogs;
+    private RecyclerView rvDogs;
+
     private ArrayList<Dog> dogs;
     private DogAdapter adapter;
 
@@ -31,11 +34,14 @@ public class MainActivity extends AppCompatActivity {
         btOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Dog d = new Dog();
+
                 d.setRace(etRace.getText().toString());
                 d.setAge(Integer.parseInt(etAge.getText().toString()));
 
                 dogs.add(d);
+
                 adapter.notifyDataSetChanged();
                 toast("Dog cadastrado.");
             }
@@ -45,11 +51,13 @@ public class MainActivity extends AppCompatActivity {
         etRace = findViewById(R.id.ma_et_race);
         etAge = findViewById(R.id.ma_et_age);
         btOK = findViewById(R.id.ma_bt_ok);
-        lvDogs = findViewById(R.id.ma_lv_dogs);
+        rvDogs = findViewById(R.id.ma_rv_dogs);
 
         dogs = new ArrayList<>();
         adapter = new DogAdapter(MainActivity.this,dogs);
-        lvDogs.setAdapter(adapter);
+        rvDogs.setAdapter(adapter);
+        rvDogs.setHasFixedSize(true);
+        rvDogs.setLayoutManager(new LinearLayoutManager(this));
     }
     private void toast(String msg){
         Toast.makeText(getBaseContext(), msg, Toast.LENGTH_SHORT).show();

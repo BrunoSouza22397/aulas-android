@@ -1,4 +1,4 @@
-# Aulas de desenvolvimento em android
+﻿# Aulas de desenvolvimento em android
 
 ## Índice
 ### Aula5Exer1Tarde
@@ -17,3 +17,5 @@ Exemplos usando radio button e check box.
 Exemplos de intents implicitas.
 ### ExSpinnerListViewStringArrayTarde
 Exemplos utilizando spinner e list view.
+### ExArrayAdapterDog
+Exemplo utilizando Recycler View com layout customizado.
