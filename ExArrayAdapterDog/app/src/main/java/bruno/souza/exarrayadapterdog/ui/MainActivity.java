@@ -46,6 +46,17 @@ public class MainActivity extends AppCompatActivity {
                 toast("Dog cadastrado.");
             }
         });
+        adapter.setOnItemClickListener(new DogAdapter.ClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                toast("Clicou");
+            }
+
+            @Override
+            public void onItemLongClick(View v, int position) {
+                toast("Clicou e segurou");
+            }
+        });
     }
     private void init(){
         etRace = findViewById(R.id.ma_et_race);
