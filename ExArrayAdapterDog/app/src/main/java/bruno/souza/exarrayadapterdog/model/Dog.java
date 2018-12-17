@@ -3,8 +3,17 @@ package bruno.souza.exarrayadapterdog.model;
 public class Dog {
     private String race;
     private int age;
+    private String key;
 
     public Dog() {
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getRace() {
@@ -25,7 +34,8 @@ public class Dog {
 
     @Override
     public String toString() {
-        return "Raçe: " + race +
+        return "Key: " + key +
+                "\nRaça: " + race +
                 "\nIdade: " + age +
                 "\nIdade em anos humanos: "+calcDogAge();
     }
