@@ -18,4 +18,4 @@ Exemplos de intents implicitas.
 ### ExSpinnerListViewStringArrayTarde
 Exemplos utilizando spinner e list view.
 ### ExArrayAdapterDog
-Exemplo utilizando Recycler View com layout customizado.
+Exemplo utilizando Recycler View com layout customizado, cadastra dados em banco Firebase.
