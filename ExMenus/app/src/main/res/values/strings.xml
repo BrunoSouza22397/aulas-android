@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ExMenus</string>
     <string name="action_settings">Settings</string>
+    <string name="toolbar_title">Title</string>
+    <string name="toast_menu_sobre">Clicou no menu sobre.</string>
+    <string name="tv_texto">textotextotextotextotextotextotextotextotextotextotextotextotextotextotextotextotextotextotextotextotextotextotextotextotextotextotextotexto</string>
 </resources>
